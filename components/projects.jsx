@@ -255,7 +255,7 @@ export default function Projects() {
               className="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 hover:opacity-90 transition-all duration-300 text-white px-6"
               asChild
             >
-              <Link href="#contact">
+              <Link href="https://github.com/PankajKumarDhal?tab=repositories">
                 View More Projects <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
