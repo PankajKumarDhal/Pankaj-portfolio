@@ -143,7 +143,7 @@ export default function About() {
                   >
                     I'm a{" "}
                     <span className="font-semibold text-amber-400">
-                      Frontend Developer
+                      Full Stack Developer
                     </span>{" "}
                     with experience in building responsive and performant web
                     applications using modern technologies.
@@ -178,10 +178,14 @@ export default function About() {
                       React.js
                     </span>
                     ,{" "}
-                    <span className="font-semibold text-yellow-400">
+                    <span className="font-semibold text-violet-400">
                       JavaScript
                     </span>
-                    , and various frontend frameworks and libraries.
+                    ,{" "}
+                    <span className="font-semibold text-yellow-400">
+                      tailwind css
+                    </span>
+                    , , and various frontend frameworks and libraries.
                   </motion.p>
                   <motion.p
                     className="text-lg leading-relaxed text-gray-300"

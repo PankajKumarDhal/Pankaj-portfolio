@@ -23,7 +23,7 @@ export default function Hero() {
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
       strings: [
-        "Frontend Developer",
+        "Full Stack Developer",
         "React.js Expert",
         "UI/UX Enthusiast",
         "Problem Solver",

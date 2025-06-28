@@ -134,7 +134,7 @@ export default function Navbar() {
             <Button className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 transition-all duration-300 shadow-md hover:shadow-pink-500/20 hover:shadow-lg">
               Resume
               <Link
-                href="https://drive.google.com/file/d/1f5ZjuK6ah05XIHS58-BewUfgmI01KFSB/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1ouR2JNNF-nv5yKUAZ1XXYOEqUbLiZnrn/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               ></Link>
@@ -202,7 +202,7 @@ export default function Navbar() {
               <Button className="w-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600">
                 <span className="sr-only">Resume</span>
                 <Link
-                  href="https://drive.google.com/file/d/1f5ZjuK6ah05XIHS58-BewUfgmI01KFSB/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1ouR2JNNF-nv5yKUAZ1XXYOEqUbLiZnrn/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 ></Link>

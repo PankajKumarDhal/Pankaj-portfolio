@@ -1,10 +1,16 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Briefcase, GraduationCap, Code } from "lucide-react"
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Briefcase, GraduationCap, Code } from "lucide-react";
 
 const experiences = [
   {
@@ -45,14 +51,18 @@ const experiences = [
       "Responsible for monitoring and increasing the feasibility of content across various sections within the website.",
     ],
   },
-]
+];
 
 export default function Experience() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.2 })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section id="experience" ref={ref} className="py-20 relative overflow-hidden">
+    <section
+      id="experience"
+      ref={ref}
+      className="py-20 relative overflow-hidden"
+    >
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900"></div>
 
@@ -112,9 +122,13 @@ export default function Experience() {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
+                }
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className={`md:flex ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-8 relative`}
+                className={`md:flex ${
+                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                } gap-8 relative`}
               >
                 {/* Timeline dot with pulse effect */}
                 <div className="absolute left-[50%] top-10 w-6 h-6 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 transform -translate-x-1/2 hidden md:flex items-center justify-center z-10">
@@ -132,7 +146,13 @@ export default function Experience() {
                   </Badge>
                 </div>
 
-                <div className={`md:w-1/2 ${index % 2 === 0 ? "md:text-right md:pr-8" : "md:text-left md:pl-8"}`}>
+                <div
+                  className={`md:w-1/2 ${
+                    index % 2 === 0
+                      ? "md:text-right md:pr-8"
+                      : "md:text-left md:pl-8"
+                  }`}
+                >
                   {/* Date badge for desktop */}
                   <div className="hidden md:block mb-2">
                     <Badge
@@ -144,29 +164,63 @@ export default function Experience() {
                   </div>
 
                   <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm group">
-                    <div className={`h-1 w-full bg-gradient-to-r ${exp.color}`}></div>
-                    <CardHeader className={`pb-2 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
+                    <div
+                      className={`h-1 w-full bg-gradient-to-r ${exp.color}`}
+                    ></div>
+                    <CardHeader
+                      className={`pb-2 ${
+                        index % 2 === 0 ? "md:text-right" : "md:text-left"
+                      }`}
+                    >
                       <div className="flex items-center gap-2 mb-1 justify-between md:justify-start">
                         <div
-                          className={`flex items-center gap-2 ${index % 2 === 1 ? "md:flex-row" : "md:flex-row-reverse"}`}
+                          className={`flex items-center gap-2 ${
+                            index % 2 === 1
+                              ? "md:flex-row"
+                              : "md:flex-row-reverse"
+                          }`}
                         >
                           {exp.type === "work" ? (
                             <Briefcase
-                              className={`h-5 w-5 ${exp.type === "work" ? "text-pink-400" : exp.type === "education" ? "text-cyan-400" : "text-amber-400"}`}
+                              className={`h-5 w-5 ${
+                                exp.type === "work"
+                                  ? "text-pink-400"
+                                  : exp.type === "education"
+                                  ? "text-cyan-400"
+                                  : "text-amber-400"
+                              }`}
                             />
                           ) : exp.type === "education" ? (
                             <GraduationCap
-                              className={`h-5 w-5 ${exp.type === "work" ? "text-pink-400" : exp.type === "education" ? "text-cyan-400" : "text-amber-400"}`}
+                              className={`h-5 w-5 ${
+                                exp.type === "work"
+                                  ? "text-pink-400"
+                                  : exp.type === "education"
+                                  ? "text-cyan-400"
+                                  : "text-amber-400"
+                              }`}
                             />
                           ) : (
                             <Code
-                              className={`h-5 w-5 ${exp.type === "work" ? "text-pink-400" : exp.type === "education" ? "text-cyan-400" : "text-amber-400"}`}
+                              className={`h-5 w-5 ${
+                                exp.type === "work"
+                                  ? "text-pink-400"
+                                  : exp.type === "education"
+                                  ? "text-cyan-400"
+                                  : "text-amber-400"
+                              }`}
                             />
                           )}
                           <CardTitle
                             className="text-white group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500 ease-in-out"
                             style={{
-                              backgroundImage: `linear-gradient(to right, ${exp.type === "work" ? "#ec4899, #a855f7" : exp.type === "education" ? "#06b6d4, #3b82f6" : "#f59e0b, #f97316"})`,
+                              backgroundImage: `linear-gradient(to right, ${
+                                exp.type === "work"
+                                  ? "#ec4899, #a855f7"
+                                  : exp.type === "education"
+                                  ? "#06b6d4, #3b82f6"
+                                  : "#f59e0b, #f97316"
+                              })`,
                             }}
                           >
                             {exp.title}
@@ -174,7 +228,11 @@ export default function Experience() {
                         </div>
                       </div>
                       <CardDescription
-                        className={`flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 ${index % 2 === 1 ? "md:justify-start" : "md:justify-end"} text-gray-400`}
+                        className={`flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 ${
+                          index % 2 === 1
+                            ? "md:justify-start"
+                            : "md:justify-end"
+                        } text-gray-400`}
                       >
                         <span className="font-medium">{exp.company}</span>
                         <span className="hidden sm:inline">•</span>
@@ -183,7 +241,11 @@ export default function Experience() {
                     </CardHeader>
                     <CardContent>
                       <ul
-                        className={`list-disc ${index % 2 === 0 ? "md:pl-0 md:pr-5 md:list-inside" : "pl-5"} space-y-1`}
+                        className={`list-disc ${
+                          index % 2 === 0
+                            ? "md:pl-0 md:pr-5 md:list-inside"
+                            : "pl-5"
+                        } space-y-1`}
                       >
                         {exp.description.map((item, i) => (
                           <li key={i} className="text-gray-300">
@@ -203,5 +265,5 @@ export default function Experience() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

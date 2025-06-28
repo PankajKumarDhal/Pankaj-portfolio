@@ -54,8 +54,8 @@ export default function Footer() {
               Pankaj Kumar
             </h3>
             <p className="text-gray-400 mb-4">
-              A passionate Frontend Developer building modern and responsive web
-              applications.
+              A passionate Full Stack Developer building modern and responsive
+              web applications.
             </p>
             <div className="flex items-center space-x-4">
               <motion.a
